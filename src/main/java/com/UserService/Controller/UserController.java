@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 public class UserController {
 
 	@Autowired
-	private UsersServiceImpl impl;
+	 UsersServiceImpl impl;
 
 	@GetMapping("/getAllUsers")
 	public ResponseEntity<?> getAllUsers() {
@@ -32,6 +32,15 @@ public class UserController {
 		} catch (Exception e) {
 			return new ResponseEntity<String>(e.getMessage(), HttpStatus.NOT_FOUND);
 		}
+	}
+	
+	@GetMapping("/user/{id}")
+	public ResponseEntity<?> getUserById(@PathVariable Integer id){
+//		try {
+			return ResponseEntity.status(HttpStatus.OK).body(impl.getUserById(id));
+//		} catch (Exception e) {
+// 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+//		}
 	}
 
 	@PostMapping("/addUser")

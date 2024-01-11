@@ -5,18 +5,18 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
-public class Ratings {
+public class Hotel {
+
 	
 	private Integer id;
-	private String userId;
-	private String hotelId;
-	private String feedBack;
-	private int ratings;
-	private Hotel hotel;
-
+	
+	private String name;
+	
+	private String location;
+	
+	private String about;
 }

@@ -2,6 +2,8 @@ package com.UserService.Exceptions;
 
 import org.springframework.http.HttpStatus;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -13,6 +15,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Builder
+@JsonInclude
 public class ApiResponse {
 
 	private String message;

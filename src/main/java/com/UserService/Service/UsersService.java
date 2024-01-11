@@ -10,7 +10,7 @@ public interface UsersService {
 	
 	public String addUsers(Users users);
 	
-	public Optional<Users> getUserById(Integer id);
+	public Users getUserById(Integer id);
 	
 	public String deleteUserById(Integer id);
 	
